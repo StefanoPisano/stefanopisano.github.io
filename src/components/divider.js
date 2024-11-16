@@ -11,7 +11,7 @@ const Divider = ({label}) => {
 
   return (
       <div className="divider">
-          <div style={{textAlign:"center", fontSize:"2em", letterSpacing:"30px", margin:"10px 0"}}>...</div>
+          <div style={{textAlign:"center", fontSize:"2em", letterSpacing:"30px", margin:"50px 0"}}>...</div>
           <span className="label">{label}</span>
       </div>
   )
