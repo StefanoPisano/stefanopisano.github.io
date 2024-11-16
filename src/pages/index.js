@@ -25,11 +25,11 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} >
       <Intro />
-        <Divider label={"Posts"}/>
+        <Divider label={"Posts"} style={{display:"none"}}/>
 
-      <ol style={{ listStyle: `none` }}>
+      <ol style={{ listStyle: `none`, display:"none" }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -73,7 +73,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="All posts" />
+export const Head = () => <Seo title="Hello! I'm Stefano" />
 
 export const pageQuery = graphql`
   {
