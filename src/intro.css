@@ -1,0 +1,51 @@
+.intro  {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    min-height: 100vh;
+    transition: background 0.2s linear;
+    color: black;
+}
+
+.intro .container {
+    text-align: left;
+}
+
+.intro h1.title {
+    font-size: 4.5em;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.intro .container p {
+    max-width: 30em;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.intro  p.subtitle {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.intro span.name {
+    font-weight: bold;
+}
+
+.intro span.accent {
+    color: #ff6f3c;
+    font-size: calc(1em + 0.20vw);
+    font-weight: 300;
+}
+
+.intro a.link {
+    font-weight: 300;
+    color: #ff9a3c;
+    text-decoration: none;
+    border-bottom: 5px solid #ffc93c
+}
+
