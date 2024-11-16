@@ -19,9 +19,6 @@ const Intro = () => {
             summary,
             motto
           }
-          social {
-            github
-          }
         }
       }
     }

@@ -19,9 +19,7 @@ const Bio = () => {
             summary,
             motto
           }
-          social {
-            github
-          }
+   
         }
       }
     }
