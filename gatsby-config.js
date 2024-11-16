@@ -16,10 +16,7 @@ module.exports = {
       motto: `Coding clean and maintainable things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      github: `kylemathews`,
-    },
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`
   },
   plugins: [
     `gatsby-plugin-image`,
