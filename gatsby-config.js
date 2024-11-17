@@ -14,6 +14,9 @@ module.exports = {
       name: `Stefano`,
       summary: `passionate software developer based in Milan(Italy).`,
       motto: `Coding clean and maintainable things.`,
+      linkedin: 'https://www.linkedin.com/in/stefano-pisano/',
+      github: 'https://github.com/StefanoPisano',
+      spotify: 'https://open.spotify.com/user/stefanopis?si=36f918a42cf24af6'
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`
