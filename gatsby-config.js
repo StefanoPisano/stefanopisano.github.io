@@ -18,7 +18,7 @@ module.exports = {
       github: 'https://github.com/StefanoPisano',
       spotify: 'https://open.spotify.com/user/stefanopis?si=36f918a42cf24af6'
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A nice and clean developer blog`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`
   },
   plugins: [

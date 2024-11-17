@@ -2,9 +2,7 @@ import * as React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 
 interface SeoProps {
-    description: string,
-    title: string,
-    children: React.ReactNode
+    title: string
 }
 
 interface SiteMetadata {
@@ -18,7 +16,7 @@ interface QueryResult {
     };
 }
 
-const Seo : React.FC<SeoProps> = ({description, title, children}) => {
+const Seo : React.FC<SeoProps> = ({title}) => {
     const {site} = useStaticQuery<QueryResult>(
         graphql`
       query {
@@ -32,7 +30,7 @@ const Seo : React.FC<SeoProps> = ({description, title, children}) => {
     `
     )
 
-    const metaDescription = description || site.siteMetadata.description
+    const metaDescription = site.siteMetadata.description
 
     return (
         <>
@@ -41,7 +39,6 @@ const Seo : React.FC<SeoProps> = ({description, title, children}) => {
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={metaDescription}/>
             <meta property="og:type" content="website"/>
-            {children}
         </>
     )
 }
