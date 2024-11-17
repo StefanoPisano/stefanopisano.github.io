@@ -83,7 +83,7 @@ const UserGreetings: React.FC = () => {
                 <p>
                     If you are interested on my technical skills you can check my <a className="link"
                                                                                      href={author.linkedin}>LinkedIn</a> profile
-                    or follow me on <a className="link" href={author.spotify}>Git Hub</a>.
+                    or follow me on <a className="link" href={author.github}>Git Hub</a>.
                 </p>
 
                 <p>
