@@ -1,2 +1,2 @@
-UserGreetings-agent: *
+Greetings-agent: *
 Disallow:

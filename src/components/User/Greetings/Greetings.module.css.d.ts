@@ -2,7 +2,6 @@
 export const intro: string;
 export const container: string;
 export const title: string;
-export const paragraph: string;
 export const subtitle: string;
 export const name: string;
 export const accent: string;

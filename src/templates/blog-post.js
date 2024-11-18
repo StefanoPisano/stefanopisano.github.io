@@ -1,7 +1,7 @@
 import * as React from "react"
 import {graphql, Link} from "gatsby"
 
-import UserSignature from "../components/User/UserSignature"
+import Signature from "../components/User/Signature/Signature"
 import Layout from "../components/Layout"
 
 const BlogPostTemplate = ({
@@ -25,7 +25,7 @@ const BlogPostTemplate = ({
         />
         <hr />
         <footer>
-          <UserSignature />
+          <Signature />
         </footer>
       </article>
       <nav className="blog-post-nav">

@@ -1,7 +1,9 @@
 import * as React from "react";
 import {useState} from "react";
 import {Link} from "gatsby";
-import Pagination from "../UI/Pagination/Pagination";
+import Pagination from "..//UI/Pagination/Pagination";
+import Paragraph from "../UI/Paragraph/Paragraph";
+import * as styles from "./Articles.module.css";
 
 interface FrontMatter {
     title: string,
@@ -32,26 +34,26 @@ const Articles: React.FC<ArticlesProps> = ({posts}) => {
         paginatedPosts.push(chunk);
     }
 
-    const handlePageChange = (page:number) => setCurrentPage(page);
+    const handlePageChange = (page: number) => setCurrentPage(page);
 
     return (
         <>
             {paginatedPosts.length === 0 ? (
-                <p>No posts found :c</p>
+                <Paragraph>No posts found :c</Paragraph>
             ) : (
-                <ol style={{listStyle: `none`}}>
+                <ol className={styles.postList}>
                     {paginatedPosts[currentPage].map(post => {
                         const title = post.frontmatter.title || post.fields.slug;
 
                         return (
                             <li key={post.fields.slug}>
                                 <article
-                                    className="post-list-item"
+                                    className={styles.postListItem}
                                     itemScope
                                     itemType="http://schema.org/Article"
                                 >
-                                    <header>
-                                        <h2>
+                                    <header className={styles.postListItemHeader}>
+                                        <h2 className={styles.postListItemH2}>
                                             <Link to={post.fields.slug} itemProp="url">
                                                 <span itemProp="headline">{title}</span>
                                             </Link>
@@ -59,11 +61,11 @@ const Articles: React.FC<ArticlesProps> = ({posts}) => {
                                         <small>{post.frontmatter.date}</small>
                                     </header>
                                     <section>
-                                        <p
-                                            dangerouslySetInnerHTML={{
-                                                __html: post.frontmatter.description || post.excerpt,
-                                            }}
-                                            itemProp="description"
+                                        <p className={styles.postListItemParagraph}
+                                           dangerouslySetInnerHTML={{
+                                               __html: post.frontmatter.description || post.excerpt,
+                                           }}
+                                           itemProp="description"
                                         />
                                     </section>
                                 </article>

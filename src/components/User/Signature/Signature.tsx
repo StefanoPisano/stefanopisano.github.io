@@ -1,6 +1,8 @@
 import * as React from "react";
 import {graphql, useStaticQuery} from "gatsby";
 import {StaticImage} from "gatsby-plugin-image";
+import * as styles from "./Signature.module.css";
+import Paragraph from "../../UI/Paragraph/Paragraph";
 
 interface Author {
     name: string,
@@ -19,7 +21,7 @@ interface SiteData {
     };
 }
 
-const UserSignature: React.FC = () => {
+const Signature: React.FC = () => {
     const data: SiteData = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -38,29 +40,29 @@ const UserSignature: React.FC = () => {
     const author = data.site.siteMetadata?.author;
 
     return (
-        <div className="bio">
+        <div className={styles.bio}>
             <StaticImage
-                className="bio-avatar"
+                className="rounded-image"
                 layout="fixed"
                 formats={["auto", "webp", "avif"]}
-                src="../../images/profile-pic.jpg"
+                src="../../../images/profile-pic.jpg"
                 width={50}
                 height={50}
                 quality={95}
                 alt="Profile picture"
             />
             {author?.name && (
-                <p>
+                <Paragraph paragraphClass={styles.bioText}>
                     <a href={author.linkedin}>
                         <strong>{author.name}</strong>
                     </a>{" "}
                     is a {author?.summary || null}
                     <br />
                     <strong>{author?.motto}</strong>
-                </p>
+                </Paragraph>
             )}
         </div>
     );
 };
 
-export default UserSignature;
+export default Signature;

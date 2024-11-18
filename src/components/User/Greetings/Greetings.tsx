@@ -1,7 +1,8 @@
 import * as React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import {StaticImage} from "gatsby-plugin-image"
-import * as styles from "./UserGreetings.module.css"
+import * as styles from "./Greetings.module.css"
+import Paragraph from "../../UI/Paragraph/Paragraph";
 
 interface Author {
     name: string,
@@ -20,7 +21,7 @@ interface SiteData {
     }
 }
 
-const UserGreetings: React.FC = () => {
+const Greetings: React.FC = () => {
     const data : SiteData = useStaticQuery(graphql`
     query IntroQuery {
       site {
@@ -42,10 +43,10 @@ const UserGreetings: React.FC = () => {
     return (
         <div className={styles.intro}>
             <StaticImage
-                className="bio-avatar"
+                className="rounded-image"
                 layout="fixed"
                 formats={["auto", "webp", "avif"]}
-                src="../../images/profile-pic.jpg"
+                src="../../../images/profile-pic.jpg"
                 width={128}
                 height={128}
                 quality={100}
@@ -53,40 +54,40 @@ const UserGreetings: React.FC = () => {
             />
             <div className={styles.container}>
                 <h1 className={styles.title}>Hello!<br/></h1>
-                <p className={styles.subtitle}>I am <span className={styles.name}>{author.name}</span></p>
+                <Paragraph paragraphClass={styles.subtitle}>I am <span className={styles.name}>{author.name}</span></Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     I am an italian <span className={styles.accent}>software developer</span> based in Milan.<br/>
                     I strongly believe in good practices and team working.
-                </p>
+                </Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     My passion for software development dates back to my childhood, when I would spend hours tinkering
                     with CSS
                     and HTML to create unique themes for an online forum.
                     This love propelled me towards a career in software development, which I officially began in 2016.
-                </p>
+                </Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     I thrive in an environment where teamwork is appreciated and encouraged.
                     Collaborating with others to exchange ideas, knowledge and even unwind with a refreshing beer, is
                     what makes
                     work meaningful and enjoyable to me.
-                </p>
+                </Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     While writing code I always try to apply some magic tricks which will transform bad code into clean
                     code.<br/>
                     My passion lies in keeping things simple.
-                </p>
+                </Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     If you are interested on my technical skills you can check my <a className={styles.link}
                                                                                      href={author.linkedin}>LinkedIn</a> profile
                     or follow me on <a className={styles.link} href={author.github}>Git Hub</a>.
-                </p>
+                </Paragraph>
 
-                <p className={styles.paragraph}>
+                <Paragraph>
                     Although coding is a significant part of my life, I find balance in my diverse passions. <span
                     className={styles.accent}>Music</span> has always held a special place in my heart, and I eagerly
                     explore
@@ -100,10 +101,10 @@ const UserGreetings: React.FC = () => {
                     beauty
                     of <span
                     className={styles.accent}>nature</span> during hikes.
-                </p>
+                </Paragraph>
             </div>
         </div>
     )
 }
 
-export default UserGreetings
+export default Greetings

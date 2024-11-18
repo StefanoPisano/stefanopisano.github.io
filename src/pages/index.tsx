@@ -1,7 +1,7 @@
 import * as React from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
-import UserGreetings from "../components/User/UserGreetings";
+import Greetings from "../components/User/Greetings/Greetings";
 import Divider from "../components/UI/Divider/Divider";
 import Articles from "../components/Blog/Articles";
 import Seo from "../components/Seo";
@@ -34,7 +34,7 @@ const Index: React.FC<BlogIndexProps> = ({ data, location }) => {
 
     return (
         <Layout location={location} title="">
-            <UserGreetings />
+            <Greetings />
             <Divider label={"Posts"} />
             <Articles posts={posts} />
         </Layout>

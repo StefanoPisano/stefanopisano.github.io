@@ -1,0 +1,7 @@
+.paragraph {
+    max-width: 30em;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: justify;
+    line-height: 1.3;
+}
