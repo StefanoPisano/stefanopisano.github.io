@@ -289,10 +289,14 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+footer {
+  text-align: center;
+  background: #cacaca;
+}
 
-
-
-
+.credits {
+  font-size:.7em
+}
 
 /* Media queries */
 

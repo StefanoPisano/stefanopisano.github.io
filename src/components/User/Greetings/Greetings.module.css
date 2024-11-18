@@ -1,5 +1,4 @@
-
-.intro  {
+.greetings__div  {
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
@@ -9,33 +8,33 @@
     color: black;
 }
 
-.container {
+.greetings-container__div {
     text-align: left;
 }
 
-.title {
+.title__h1 {
     font-size: 4.5em;
     margin-bottom: 0;
     font-weight: 400;
 }
 
-.subtitle {
+.subtitle__p {
     margin: 0;
     font-size: 2em;
     font-weight: 300;
 }
 
-.name {
+.name__span {
     font-weight: bold;
 }
 
-.accent {
+.accent__text {
     color: #ff6f3c;
     font-size: calc(1em + 0.20vw);
     font-weight: 300;
 }
 
-.link {
+.link__a {
     font-weight: 300;
     color: #ff9a3c;
     text-decoration: none;

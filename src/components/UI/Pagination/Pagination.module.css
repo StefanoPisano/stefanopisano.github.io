@@ -1,11 +1,11 @@
-.blog-pagination {
+.blog-pagination__div {
     display: flex;
     column-gap: 10px;
     justify-content: end;
     align-items: center;
 }
 
-.selected {
+.selected-page__button {
     border-color: #ff6f3c;
     color: #ff6f3c;
     zoom: 1.1;

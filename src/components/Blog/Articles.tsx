@@ -41,19 +41,19 @@ const Articles: React.FC<ArticlesProps> = ({posts}) => {
             {paginatedPosts.length === 0 ? (
                 <Paragraph>No posts found :c</Paragraph>
             ) : (
-                <ol className={styles.postList}>
+                <ol className={styles.posts__ol}>
                     {paginatedPosts[currentPage].map(post => {
                         const title = post.frontmatter.title || post.fields.slug;
 
                         return (
                             <li key={post.fields.slug}>
                                 <article
-                                    className={styles.postListItem}
+                                    className={styles.postsItem__li}
                                     itemScope
                                     itemType="http://schema.org/Article"
                                 >
-                                    <header className={styles.postListItemHeader}>
-                                        <h2 className={styles.postListItemH2}>
+                                    <header className={styles.postItem__header}>
+                                        <h2 className={styles.postItem__h2}>
                                             <Link to={post.fields.slug} itemProp="url">
                                                 <span itemProp="headline">{title}</span>
                                             </Link>
@@ -61,7 +61,7 @@ const Articles: React.FC<ArticlesProps> = ({posts}) => {
                                         <small>{post.frontmatter.date}</small>
                                     </header>
                                     <section>
-                                        <p className={styles.postListItemParagraph}
+                                        <p className={styles.postsItem__p}
                                            dangerouslySetInnerHTML={{
                                                __html: post.frontmatter.description || post.excerpt,
                                            }}

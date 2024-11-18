@@ -41,7 +41,7 @@ const Greetings: React.FC = () => {
     const author = data.site.siteMetadata?.author
 
     return (
-        <div className={styles.intro}>
+        <div className={styles.greetings__div}>
             <StaticImage
                 className="rounded-image"
                 layout="fixed"
@@ -52,12 +52,12 @@ const Greetings: React.FC = () => {
                 quality={100}
                 alt="Profile picture"
             />
-            <div className={styles.container}>
-                <h1 className={styles.title}>Hello!<br/></h1>
-                <Paragraph paragraphClass={styles.subtitle}>I am <span className={styles.name}>{author.name}</span></Paragraph>
+            <div className={styles.greetingsContainer__div}>
+                <h1 className={styles.title__h1}>Hello!<br/></h1>
+                <Paragraph paragraphClass={styles.subtitle__p}>I am <span className={styles.name__span}>{author.name}</span></Paragraph>
 
                 <Paragraph>
-                    I am an italian <span className={styles.accent}>software developer</span> based in Milan.<br/>
+                    I am an italian <span className={styles.accent__text}>software developer</span> based in Milan.<br/>
                     I strongly believe in good practices and team working.
                 </Paragraph>
 
@@ -82,25 +82,25 @@ const Greetings: React.FC = () => {
                 </Paragraph>
 
                 <Paragraph>
-                    If you are interested on my technical skills you can check my <a className={styles.link}
+                    If you are interested on my technical skills you can check my <a className={styles.link__a}
                                                                                      href={author.linkedin}>LinkedIn</a> profile
-                    or follow me on <a className={styles.link} href={author.github}>Git Hub</a>.
+                    or follow me on <a className={styles.link__a} href={author.github}>Git Hub</a>.
                 </Paragraph>
 
                 <Paragraph>
                     Although coding is a significant part of my life, I find balance in my diverse passions. <span
-                    className={styles.accent}>Music</span> has always held a special place in my heart, and I eagerly
+                    className={styles.accent__text}>Music</span> has always held a special place in my heart, and I eagerly
                     explore
                     every
                     genre.
                     In my free time I like being a self-taught guitar player, you can find me on <a
-                    className={styles.link}
+                    className={styles.link__a}
                     href={author.spotify}>Spotify</a> sharing
                     my favorite tunes.
-                    I'm also fascinated by <span className={styles.accent}>photography</span> and love to capture the
+                    I'm also fascinated by <span className={styles.accent__text}>photography</span> and love to capture the
                     beauty
                     of <span
-                    className={styles.accent}>nature</span> during hikes.
+                    className={styles.accent__text}>nature</span> during hikes.
                 </Paragraph>
             </div>
         </div>

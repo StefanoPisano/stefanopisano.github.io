@@ -40,7 +40,7 @@ const Signature: React.FC = () => {
     const author = data.site.siteMetadata?.author;
 
     return (
-        <div className={styles.bio}>
+        <div className={styles.signature__div}>
             <StaticImage
                 className="rounded-image"
                 layout="fixed"
@@ -52,7 +52,7 @@ const Signature: React.FC = () => {
                 alt="Profile picture"
             />
             {author?.name && (
-                <Paragraph paragraphClass={styles.bioText}>
+                <Paragraph paragraphClass={styles.signature__p}>
                     <a href={author.linkedin}>
                         <strong>{author.name}</strong>
                     </a>{" "}

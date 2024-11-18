@@ -19,13 +19,13 @@ const Pagination : React.FC<Pages> = ({pages, onButtonClick}) => {
 
     return (
         <>
-            <div className={styles.blogPagination}>
+            <div className={styles.blogPagination__div}>
                 {pages.map((v, i) => {
                     return (
                         <Button
                             key={i}
                             buttonId={i}
-                            buttonClass={i === currentPage ? styles.selected : ''}
+                            buttonClass={i === currentPage ? styles.selectedPage__button : ''}
                             label={(i + 1).toString()}
                             onButtonClick={handlePageChange}
                         ></Button>

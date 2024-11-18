@@ -6,7 +6,7 @@ interface ParagraphProps {
     paragraphClass?: string
 }
 
-const Paragraph : React.FC<ParagraphProps> = ({paragraphClass = styles.paragraph, children}) => {
+const Paragraph : React.FC<ParagraphProps> = ({paragraphClass = styles.paragraph__p, children}) => {
     return (
         <>
             <p className={paragraphClass}>

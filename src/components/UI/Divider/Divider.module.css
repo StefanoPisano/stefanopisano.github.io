@@ -1,15 +1,15 @@
-.divider {
+.divider__div {
     padding: 5px 0;
     margin: 20px 0
 }
 
-.label {
+.label__span {
     font-size: 3em;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
 }
 
-.dots {
+.dots__dov {
     text-align: center;
     font-size: 2em;
     letter-spacing: 30px;

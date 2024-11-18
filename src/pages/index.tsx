@@ -30,7 +30,7 @@ interface BlogIndexProps {
 }
 
 const Index: React.FC<BlogIndexProps> = ({ data, location }) => {
-    const posts =  data.allMarkdownRemark.nodes;
+    const posts = [] || data.allMarkdownRemark.nodes;
 
     return (
         <Layout location={location} title="">

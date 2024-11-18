@@ -1,8 +1,8 @@
-.bio {
-    display: flex;
-    margin-bottom: var(--spacing-16);
+.signature__div {
+    margin-bottom: var(--spacing-0);
 }
 
-.bio-text {
-    margin-bottom: var(--spacing-0);
+.signature__p {
+    display: flex;
+    margin-bottom: var(--spacing-16);
 }
