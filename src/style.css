@@ -318,40 +318,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.divider {
-  padding: 5px 0;
-  margin: 20px 0
-}
 
-.divider .label {
-  font-size: 3em;
-  font-weight: 300;
-  font-family: 'Poppins', sans-serif;
-}
 
-.blog-pagination {
-  display: flex;
-  column-gap: 10px;
-  justify-content: end;
-  align-items: center;
-}
 
-.blog-pagination button {
-  font-family: 'Poppins', sans-serif;
-  background: white;
-  border: 1px solid var(--color-text);
-  width: 26px;
-  height: 26px;
-  text-align: center;
-  border-radius: 100%;
-}
 
-.blog-pagination button.selected {
-  border-color: #ff6f3c;
-  color: #ff6f3c;
-  zoom: 1.1;
-  text-decoration: underline;
-}
 
 /* Media queries */
 

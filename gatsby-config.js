@@ -22,6 +22,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`
   },
   plugins: [
+    'gatsby-plugin-dts-css-modules',
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

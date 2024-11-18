@@ -1,6 +1,7 @@
 import * as React from "react";
 import {useState} from "react";
-import PageButton from "./PageButton";
+import Button from "../Button/Button";
+import * as styles from "./Pagination.module.css";
 
 interface Pages {
     pages: string[],
@@ -18,16 +19,16 @@ const Pagination : React.FC<Pages> = ({pages, onButtonClick}) => {
 
     return (
         <>
-            <div className="blog-pagination">
+            <div className={styles.blogPagination}>
                 {pages.map((v, i) => {
                     return (
-                        <PageButton
+                        <Button
                             key={i}
                             buttonId={i}
-                            buttonClass={i === currentPage ? 'selected' : ''}
+                            buttonClass={i === currentPage ? styles.selected : ''}
                             label={(i + 1).toString()}
                             onButtonClick={handlePageChange}
-                        ></PageButton>
+                        ></Button>
                     );
                 })}
             </div>

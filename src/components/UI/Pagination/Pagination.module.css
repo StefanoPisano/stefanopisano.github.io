@@ -1,0 +1,13 @@
+.blog-pagination {
+    display: flex;
+    column-gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.selected {
+    border-color: #ff6f3c;
+    color: #ff6f3c;
+    zoom: 1.1;
+    text-decoration: underline;
+}

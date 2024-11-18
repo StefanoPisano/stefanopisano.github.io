@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useState} from "react";
 import {Link} from "gatsby";
-import Pagination from "../UI/Pagination";
+import Pagination from "../UI/Pagination/Pagination";
 
 interface FrontMatter {
     title: string,

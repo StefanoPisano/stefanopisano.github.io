@@ -2,7 +2,7 @@ import * as React from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import UserGreetings from "../components/User/UserGreetings";
-import Divider from "../components/UI/Divider";
+import Divider from "../components/UI/Divider/Divider";
 import Articles from "../components/Blog/Articles";
 import Seo from "../components/Seo";
 
@@ -30,7 +30,7 @@ interface BlogIndexProps {
 }
 
 const Index: React.FC<BlogIndexProps> = ({ data, location }) => {
-    const posts = [] || data.allMarkdownRemark.nodes;
+    const posts =  data.allMarkdownRemark.nodes;
 
     return (
         <Layout location={location} title="">
