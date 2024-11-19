@@ -23,7 +23,7 @@ interface SiteData {
 
 const Signature: React.FC = () => {
     const data: SiteData = useStaticQuery(graphql`
-    query BioQuery {
+    query signatureQuery {
       site {
         siteMetadata {
           author {
